@@ -1,24 +1,7 @@
-<template>
-  <!-- The class 'twitter-timeline' has to been set to get twitter recogize the element -->
-  <a
-    class="twitter-timeline"
-    :href="'https://twitter.com/' + url"
-    :data-height="height"
-    :data-width="width"
-    :data-lang="lang"
-    :data-theme="theme"
-    :data-dnt="doNotTrack ? 'true' : 'false'"
-  >{{ description }}</a>
-</template>
-
 <script setup>
-/**
- * @see https://github.com/Buni48/vue-twitter-timeline
- * @version 1.0.0
- */
-import {onMounted} from 'vue';
+import {useScriptTag} from '@vueuse/core';
 
-const props = defineProps({
+defineProps({
   /**
    * Url of the twitter timeline without 'twitter.com/'
    * @example TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw
@@ -59,20 +42,21 @@ const props = defineProps({
   doNotTrack: {type: Boolean, default: false},
 });
 
-onMounted(() => {
-  addScript();
-});
-
-/**
- * Appends a 'script' tag to the body which is needed to show the twitter timeline.
- * @see https://help.twitter.com/en/using-twitter/embed-twitter-feed
- */
-const addScript = () => {
-  const script = document.createElement('script');
-  script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-  document.body.appendChild(script);
-};
+useScriptTag('https://platform.twitter.com/widgets.js');
 </script>
+
+<template>
+  <!-- The class 'twitter-timeline' has to been set to get twitter recogize the element -->
+  <a
+    class="twitter-timeline"
+    :href="'https://twitter.com/' + url"
+    :data-height="height"
+    :data-width="width"
+    :data-lang="lang"
+    :data-theme="theme"
+    :data-dnt="doNotTrack ? 'true' : 'false'"
+  >{{ description }}</a>
+</template>
 
 <style scoped>
 </style>

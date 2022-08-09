@@ -1,4 +1,9 @@
+<script setup>
+import TwitterTimeline from './components/TwitterTimeline.vue';
+</script>
+
 <template>
+  <h1>Vue Twitter Timeline</h1>
   <TwitterTimeline
     url="TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw"
     description="Loading..."
@@ -10,17 +15,6 @@
   />
 </template>
 
-<script>
-import TwitterTimeline from './components/TwitterTimeline.vue'
-
-export default {
-  name: 'App',
-  components: {
-    TwitterTimeline
-  }
-}
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,6 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 2rem;
 }
 </style>
