@@ -62,6 +62,12 @@ npm run release
 npm run build-site
 ```
 
+### Update dependencies
+
+```
+npm run update
+```
+
 ## License
 
 MIT
