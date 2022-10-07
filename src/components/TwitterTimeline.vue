@@ -24,14 +24,14 @@ defineProps({
   width: {type: String, default: ''},
   /**
    * Language key to use by twitter timeline
-   * 
+   *
    * By default the browser language of the user will be chosen or if not detectable English
    * @example 'en', 'de', 'es', 'fr'
    */
   lang: {type: String, default: ''},
   /**
    * Theme to use by twitter timeline
-   * 
+   *
    * By default the system settings of the user will be chosen or if not detectable the light theme
    * @values '', 'light', 'dark',
    */
@@ -55,7 +55,9 @@ useScriptTag('https://platform.twitter.com/widgets.js');
     :data-lang="lang"
     :data-theme="theme"
     :data-dnt="doNotTrack ? 'true' : 'false'"
-  >{{ description }}</a>
+  >
+    {{ description }}
+  </a>
 </template>
 
 <style scoped>
