@@ -1,7 +1,7 @@
 {
   "name": "vue-twitter-timeline",
   "description": "A Vue3 component which allows you to easily embed twitter timelines.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/bunesk/vue-twitter-timeline",
   "author": "Bünyamin Eskiocak",
   "license": "MIT",
