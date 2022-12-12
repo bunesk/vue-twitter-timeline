@@ -8,6 +8,7 @@ If you are looking for a Vue3 component to embed tweets check out [this](https:/
 ```
 npm install vue-twitter-timeline
 ```
+
 ## Usage
 
 ```javascript
@@ -18,8 +19,8 @@ import TwitterTimeline from 'vue-twitter-timeline';
 <TwitterTimeline
   url="TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw"
   description="Loading..."
-  height="480"
-  width="520"
+  height="720"
+  width="720"
   lang="de"
   theme="dark"
   doNotTrack
@@ -28,15 +29,15 @@ import TwitterTimeline from 'vue-twitter-timeline';
 
 ### Props
 
-| Property | Description |
-| --- | --- |
-| `url` | The timeline url part after `https://twitter.com/` |
-| `description` | Text to show while loading or if it can't load |
-| `height` | Height in pixels |
-| `width` | Width in pixels |
-| `lang` | Language key to use (default by browser or `en`) |
-| `theme` | Theme to use (default by system or `light`, values: `light`, `dark`) |
-| `doNotTrack` | Set this bool to prevent tracking |
+| Property      | Description                                        | Type             | Default                  |
+| ------------- | -------------------------------------------------- | ---------------- | ------------------------ |
+| `url`         | The timeline url part after `https://twitter.com/` | `string`         | -                        |
+| `description` | Text to show while loading or if it can't load     | `string`         | `''`                     |
+| `height`      | Height in pixels                                   | `string`         | `''`                     |
+| `width`       | Width in pixels                                    | `string`         | `''`                     |
+| `lang`        | Language key to use                                | `string`         | browser setting / `en`   |
+| `theme`       | Theme to use                                       | `light` / `dark` | system setting / `light` |
+| `doNotTrack`  | If tracking should be prevented                    | `boolean`        | `false`                  |
 
 ## Project setup
 
