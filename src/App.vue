@@ -7,8 +7,8 @@ import TwitterTimeline from './components/TwitterTimeline.vue';
   <TwitterTimeline
     url="TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw"
     description="Loading..."
-    height="480"
-    width="520"
+    height="720"
+    width="720"
     lang="de"
     theme="dark"
     doNotTrack
@@ -23,5 +23,8 @@ import TwitterTimeline from './components/TwitterTimeline.vue';
   text-align: center;
   color: #2c3e50;
   margin-top: 2rem;
+}
+.twitter-timeline {
+  display: inline-flex !important;
 }
 </style>
